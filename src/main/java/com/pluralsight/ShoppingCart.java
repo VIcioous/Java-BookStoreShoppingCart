@@ -60,8 +60,18 @@ public class ShoppingCart {
   }
   catch (IndexOutOfBoundsException ignored)
   {
-
   }
+
+ }
+
+ public void updateCartItem(int index, int quantity)
+ {
+  try {
+   CartItem cartItem= cartItems.get(index);
+   cartItem.setQuantity(quantity);
+  }
+  catch (IndexOutOfBoundsException ignore)
+  {}
 
  }
 
